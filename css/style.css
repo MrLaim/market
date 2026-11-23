@@ -1,0 +1,544 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html,body{
+width:100%;
+overflow-x:hidden;
+font-family:Arial,sans-serif;
+background:#e3dbb2;
+color:#242424;
+}
+
+/* ссылки */
+a{
+text-decoration:none;
+color:inherit;
+}
+
+/* контейнер */
+.container{
+max-width:1180px;
+margin:auto;
+padding:0 16px;
+}
+
+/* ================= HEADER ================= */
+.header{
+height:70px;
+background:#22330a;
+color:#fff;
+width:100%;
+}
+
+.nav{
+height:100%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.logo{
+height:70px;
+display:flex;
+align-items:center;
+}
+
+.logo img{
+height:100%;
+width:auto;
+display:block;
+}
+
+.menu{
+display:flex;
+gap:25px;
+}
+
+.burger{
+display:none;
+background:none;
+border:0;
+color:#fff;
+font-size:28px;
+cursor:pointer;
+}
+
+/* ================= HERO ================= */
+.hero{
+height:260px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.hero h1{
+font-size:32px;
+margin-bottom:20px;
+}
+
+/* ================= BUTTON ================= */
+.btn{
+background:#788740;
+color:#fff;
+border:0;
+width:100%;
+max-width:180px;
+min-height:44px;
+padding:10px;
+border-radius:6px;
+cursor:pointer;
+text-align:center;
+}
+
+.btn:hover{
+background:#647235;
+}
+
+/* ================= TITLES ================= */
+h2{
+font-size:26px;
+margin:10px 0 20px;
+text-align:center;
+}
+
+/* ================= CATEGORIES ================= */
+.cats{
+background:#22330a;
+padding:20px 0 24px;
+}
+
+.cats h2{
+color:#fff;
+}
+
+.categories,
+.products{
+display:grid;
+gap:20px;
+}
+
+.categories{
+grid-template-columns:repeat(4,1fr);
+}
+
+.categories .card{
+background:#788740;
+color:#fff;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+/* ================= CARDS ================= */
+.card{
+background:#fff;
+border-radius:8px;
+padding:15px;
+}
+
+.small{
+min-height:44px;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+/* ================= PRODUCTS ================= */
+.products{
+grid-template-columns:repeat(4,1fr);
+}
+
+.card.product{
+display:flex;
+flex-direction:column;
+align-items:center;
+text-align:center;
+gap:10px;
+}
+
+.card.product img{
+width:180px;
+height:180px;
+object-fit:contain;
+display:block;
+margin:0 auto;
+}
+
+/* ================= FOOTER ================= */
+.footer{
+margin-top:60px;
+padding:30px 0;
+text-align:center;
+background:#22330a;
+color:#fff;
+}
+
+/* ================= PRODUCT PAGE ================= */
+.product-top {
+    display: flex !important;
+    flex-direction: row;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* ВАЖНО: фикс ширины колонок */
+.product-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.product-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* защита картинки */
+.product-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ОБЯЗАТЕЛЬНО: чтобы не схлопывалось */
+.product-page {
+    width: 100%;
+}
+
+.card-specs {
+    background: #bbbd88;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 20px;
+}
+
+/* описание */
+.card-desc {
+    background: #ffffff;
+    padding: 5px 20px 5px 20px;
+    border-radius: 12px;
+    margin: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* чуть красивее текст */
+.card-specs p,
+.card-desc p {
+    margin: 6px 0;
+}
+/* ================= CART ================= */
+.cart{
+padding:40px 16px;
+}
+
+.cart-title{
+font-size:32px;
+margin-bottom:30px;
+text-align:center;
+}
+
+/* список */
+.cart-items{
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+/* КАРТОЧКА ТОВАРА (главный фикс) */
+.cart-item{
+display:grid;
+grid-template-columns:80px 1fr 120px 120px 40px;
+align-items:center;
+gap:15px;
+background:#fff;
+padding:15px;
+border-radius:10px;
+box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* картинка */
+.cart-img{
+width:80px;
+height:80px;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.cart-img img{
+width:100%;
+height:100%;
+object-fit:contain;
+}
+
+/* инфо */
+.cart-info h3{
+font-size:16px;
+margin-bottom:5px;
+}
+
+.cart-info p{
+margin:0;
+}
+
+/* количество */
+.cart-qty{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.cart-qty button{
+width:28px;
+height:28px;
+border:0;
+background:#788740;
+color:#fff;
+border-radius:4px;
+cursor:pointer;
+}
+
+/* итог */
+.cart-total{
+font-weight:700;
+}
+
+/* удалить */
+.cart-remove{
+background:none;
+border:0;
+font-size:20px;
+cursor:pointer;
+}
+
+/* итог блока */
+.cart-summary{
+margin-top:30px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.cart-summary p{
+font-size:20px;
+}
+/* ================= AUTH FIX FINAL ================= */
+
+.auth{
+display:flex;
+justify-content:center;
+align-items:center;
+padding:60px 16px;
+}
+
+.auth-box{
+background:#fff;
+padding:30px;
+border-radius:12px;
+width:100%;
+max-width:380px;
+box-shadow:0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* вкладки */
+.tabs{
+display:flex;
+gap:10px;
+margin-bottom:20px;
+}
+
+.tab{
+flex:1;
+padding:10px;
+border:0;
+cursor:pointer;
+background:#bbbd88;
+border-radius:8px;
+transition:.2s;
+}
+
+.tab.active{
+background:#788740;
+color:#fff;
+}
+
+/* ❗ КРИТИЧНО */
+.auth-box .form{
+display:none !important;
+flex-direction:column;
+gap:12px;
+align-items:center;
+}
+
+/* ❗ показываем только активную */
+.auth-box .form.active{
+display:flex !important;
+}
+
+/* inputs */
+.auth-box input{
+width:100%;
+height:42px;
+border:0;
+border-radius:8px;
+padding:0 12px;
+background:#e3dbb2;
+outline:none;
+}
+
+/* кнопка по центру */
+.auth-box .btn{
+display:block;
+margin:10px auto 0;
+width:100%;
+max-width:220px;
+}
+/* ================= CATALOG ================= */
+
+/* ВАЖНО: фикс выравнивания поиска + фильтров */
+.catalog-top{
+display:grid;
+grid-template-columns:1fr 520px;
+gap:30px;
+padding:24px 16px;
+align-items:start;
+}
+
+/* заголовок */
+.catalog-title h1{
+font-size:42px;
+font-weight:700;
+}
+
+/* блок справа = фикс ширины */
+.catalog-controls{
+width:100%;
+max-width:520px;
+margin-left:auto;
+}
+
+/* ПОИСК — полный контроль */
+.catalog-controls input{
+width:100%;
+height:42px;
+border:0;
+border-radius:12px;
+background:#b7bc85;
+padding:0 14px;
+font-size:16px;
+margin-bottom:10px;
+outline:none;
+}
+
+/* ФИЛЬТРЫ — теперь строго 2 одинаковых блока */
+.filters{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px;
+width:100%;
+}
+
+/* select одинаковый размер */
+.filters select{
+width:100%;
+height:42px;
+border:0;
+border-radius:12px;
+background:#b7bc85;
+padding:0 10px;
+font-size:14px;
+outline:none;
+appearance:none;
+cursor:pointer;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width:770px){
+
+.menu{
+display:none;
+position:absolute;
+top:70px;
+left:0;
+right:0;
+background:#22330a;
+flex-direction:column;
+padding:15px;
+}
+
+.menu.show{
+display:flex;
+}
+
+.burger{
+display:block;
+}
+
+.products{
+grid-template-columns:repeat(2,1fr);
+}
+
+.categories{
+grid-template-columns:1fr 1fr;
+}
+
+.product-card{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.catalog-top{
+grid-template-columns:1fr;
+}
+
+.catalog-controls{
+max-width:100%;
+margin-left:0;
+}
+
+.filters{
+grid-template-columns:1fr;
+}
+}
+
+@media (max-width:480px){
+
+.products,
+.categories{
+grid-template-columns:1fr;
+}
+}
+
+.alert{
+width:100%;
+padding:10px;
+border-radius:8px;
+background:#788740;
+color:#fff;
+text-align:center;
+font-size:14px;
+}
+
+.alert-global{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+
+    min-width: 250px;
+    max-width: 300px;
+
+    padding: 12px;
+    border-radius: 8px;
+
+    color: #fff;
+    font-size: 14px;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
